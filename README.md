@@ -54,6 +54,12 @@ const char* mensajesPisos[] = {
 };
 ```
 
++Las constantes definen los pines que se usan para los botones, LEDs y segmentos de un display de siete segmentos. También define los tiempos que tarda el montacargas en llegar a cada piso y el tiempo que se espera después de que se mueve el montacargas.
+
++Las variables booleanas son para almacenar el estado de los botones y el estado de movimiento del montacargas.
+
++El contador se inicializa en 0 y se utiliza para indicar el piso actual en el que se encuentra el montacargas. El array de mensajes de pisos se usa para almacenar mensajes de texto que indican el piso al que se mueve el montacargas.
+
 
 ``` C++
 // FUNCIONES
