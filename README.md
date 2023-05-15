@@ -11,7 +11,10 @@ objetivo es que implementes un sistema que pueda recibir ordenes de subir, bajar
 desde diferentes pisos y muestre el estado actual del montacargas en el display 7 segmentos
 
 ## Función principal
+``` C++
 
+```
+### Explicacion
 ``` C++
 #define BOTON_SUBIR 2
 #define BOTON_BAJAR 3
@@ -52,64 +55,8 @@ const char* mensajesPisos[] = {
   "Llego al piso 9."
 };
 
-void mostrarPiso(int piso) {
-switch(piso) {
-  case 0:
-  	cero(1);
-  	break;
-  case 1:
-  	uno(1);
-  	break;
-  case 2:
-    dos(1);
-    break;
-  case 3:
-    tres(1);
-    break;
-  case 4:
-    cuatro(1);
-    break;
-  case 5:
-    cinco(1);
-    break;
-  case 6:
-    seis(1);
-    break;
-  case 7:
-    siete(1);
-    break;
-  case 8:
-    ocho(1);
-    break;
-  case 9:
-    nueve(1);
-    break;
-}
-mensaje = mensajesPisos[piso];
-}
-
-void cambiarPiso(String direccion) {
-  if (direccion == "subir" && contador < 9) {
-    contador++;
-  }
-  else if (direccion == "bajar" && contador > 0) {
-    contador--;
-  }
-}
-
-int moverPiso(String subirBajar, int tiempoDelay)
-{
-  digitalWrite(led_Rojo, 0);
-  cambiarPiso(subirBajar);
-  mostrarPiso(contador);
-  digitalWrite(led_Verde, 1);
-  delay(tiempoDelay);
-  digitalWrite(led_Verde , 0);
-  displayOff();
-  Serial.println(mensaje);
-  return contador;
-}
-
+```
+``` C++
 // FUNCIONES
 void displayOff() // Apago display al salir del switch
 {
@@ -329,7 +276,16 @@ void actualizarDisplay(int piso) {
   }
 }
 // FIN FUNCIONES
+```
++ La función **displayOff()** se utiliza para apagar todos los segmentos del display cuando se sale del switch o se necesita apagar el display.
 
++ Las funciones **cero() a nueve()**se utilizan para mostrar los dígitos del 0 al 9 en el display. Cada función enciende los segmentos necesarios para mostrar el dígito correspondiente. Por ejemplo, la función cero() enciende todos los segmentos excepto el segmento G.
+
++ La función **todos()** enciende todos los segmentos del display, lo que resulta en la visualización del número 8.
+
++ La función **actualizarDisplay()** se utiliza para mostrar el número del piso en el que se encuentra un elevador, por ejemplo. Se utiliza un switch para seleccionar el número del piso y luego se llama a esta función para actualizar el display con el número correspondiente. La función toma como argumento el número del piso y utiliza los comandos digitalWrite() para encender los segmentos necesarios para mostrar el número en el display.
+
+``` C++
 void setup() {
 pinMode(BOTON_SUBIR, INPUT_PULLUP);
 pinMode(BOTON_BAJAR, INPUT_PULLUP);
@@ -375,9 +331,68 @@ if (botonPausa == LOW) {
 }
 
 
+
+``` C++
+void mostrarPiso(int piso) {
+switch(piso) {
+  case 0:
+  	cero(1);
+  	break;
+  case 1:
+  	uno(1);
+  	break;
+  case 2:
+    dos(1);
+    break;
+  case 3:
+    tres(1);
+    break;
+  case 4:
+    cuatro(1);
+    break;
+  case 5:
+    cinco(1);
+    break;
+  case 6:
+    seis(1);
+    break;
+  case 7:
+    siete(1);
+    break;
+  case 8:
+    ocho(1);
+    break;
+  case 9:
+    nueve(1);
+    break;
+}
+mensaje = mensajesPisos[piso];
+}
+
+void cambiarPiso(String direccion) {
+  if (direccion == "subir" && contador < 9) {
+    contador++;
+  }
+  else if (direccion == "bajar" && contador > 0) {
+    contador--;
+  }
+}
+
+int moverPiso(String subirBajar, int tiempoDelay)
+{
+  digitalWrite(led_Rojo, 0);
+  cambiarPiso(subirBajar);
+  mostrarPiso(contador);
+  digitalWrite(led_Verde, 1);
+  delay(tiempoDelay);
+  digitalWrite(led_Verde , 0);
+  displayOff();
+  Serial.println(mensaje);
+  return contador;
+}
 ```
 
-### Explicacion
+
 + **las funciones principales son**
 + **moverPiso()** La función principal del programa es moverPiso(), que se encarga de mover el montacargas a un piso determinado. Esta función recibe dos parámetros: subirBajar, que indica si el montacargas debe subir o bajar, y tiempoDelay, que indica cuánto tiempo debe esperar el programa después de que el montacargas se mueve. Dentro de la función, primero se apaga el led rojo, se cambia el piso actual utilizando la función cambiarPiso(), se muestra el piso actual en el display utilizando la función mostrarPiso(), se enciende el led verde y se espera el tiempo indicado por el parámetro tiempoDelay. Luego se apaga el led verde, se apaga el display y se muestra un mensaje en el monitor serie indicando el piso al que se ha llegado.
 + **cambiarPiso()** La función cambiarPiso() se encarga de cambiar el piso actual del montacargas en función del parámetro subirBajar. Si subirBajar es "subir" y el contador actual es menor que 9, el contador se incrementa en 1. Si subirBajar es "bajar" y el contador actual es mayor que 0, el contador se decrementa en 1.
