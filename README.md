@@ -1,5 +1,7 @@
 Documentación de la parte práctica del primer parcial para la materia Sistemas de procesamiento de datos - UTN Tecnicatura Superior en Programación.
-+**Sistema de Procesamiento de Datos (SPD)**
+
+
+##**Sistema de Procesamiento de Datos (SPD)**
 
 ## Modelo de montacarga funcional
 
