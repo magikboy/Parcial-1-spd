@@ -3,7 +3,7 @@
 
 ## Modelo de montacarga funcional
 
-![Semáforos para no videntes](https://github.com/magikboy/Dojo-2/blob/main/arduino.png)
+![Semáforos para no videntes](https://github.com/magikboy/Parcial-1/blob/1a975207471b0b0f8a8c081eb3d869e3463c76a1/tinkercad1.png)
 
 ##Consigna Montacargas:
 Se nos pide armar un modelo de montacarga funcional como maqueta para un hospital. El
