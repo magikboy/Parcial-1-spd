@@ -29,8 +29,8 @@ desde diferentes pisos y muestre el estado actual del montacargas en el display 
 #define F 12
 #define G 13
 const int TIEMPO_ESPERA_BOTON = 10; // Tiempo de espera entre lecturas de botones en milisegundos.
-const int TIEMPO_POR_PISO = 1000; // Tiempo que tarda el montacargas en llegar a cada piso en milisegundos.
-const int TIEMPO_ESPERA_MOVIMIENTO = 1000; // Tiempo de espera después de que se mueve el montacargas en milisegundos.
+const int TIEMPO_POR_PISO = 3000; // Tiempo que tarda el montacargas en llegar a cada piso en milisegundos.
+const int TIEMPO_ESPERA_MOVIMIENTO = 3000; // Tiempo de espera después de que se mueve el montacargas en milisegundos.
 
 boolean botonSubir = false;
 boolean botonBajar = false;
@@ -40,8 +40,6 @@ boolean enMovimiento = false;
 int contador = 0; //INICIALIZO EL CONTADOR EN 0
 String mensaje = ""; //PARA PODER ESCRIBIR EN EL MONITOR
 
-const int LED_ROJO_PIN = 5;
-const int LED_VERDE_PIN = 6;
 const char* mensajesPisos[] = {
   "Llego al piso 0.",
   "Llego al piso 1.",
@@ -54,8 +52,9 @@ const char* mensajesPisos[] = {
   "Llego al piso 8.",
   "Llego al piso 9."
 };
-
 ```
+
+
 ``` C++
 // FUNCIONES
 void displayOff() // Apago display al salir del switch
