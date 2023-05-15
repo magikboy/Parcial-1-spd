@@ -3,14 +3,14 @@ Documentación de la parte práctica del primer parcial para la materia Sistemas
 
 ## Modelo de montacarga funcional
 
-![Semáforos para no videntes](https://github.com/magikboy/Parcial-1/blob/1a975207471b0b0f8a8c081eb3d869e3463c76a1/tinkercad1.png)
+![Montacargas de hospital](https://github.com/magikboy/Parcial-1/blob/1a975207471b0b0f8a8c081eb3d869e3463c76a1/tinkercad1.png)
 
 ##Consigna Montacargas:
 Se nos pide armar un modelo de montacarga funcional como maqueta para un hospital. El
 objetivo es que implementes un sistema que pueda recibir ordenes de subir, bajar o pausar
-desde diferentes pisos y muestre el estado actual del montacargas en el display 7 segmentos
+desde diferentes pisos y muestre el estado actual del montacargas en el display 7 segmentos.
 
-## Función principal
+## Codigo del proyecto
 ``` C++
 #define BOTON_SUBIR 2
 #define BOTON_BAJAR 3
