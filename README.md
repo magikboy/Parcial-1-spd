@@ -392,8 +392,8 @@ Recibe como parametros:
 ---
 ## <img src="tinkercad.png" alt="Tinkercad" height="32px"> Link al proyecto
 
-- [Proyecto](https://www.tinkercad.com/things/fp6nTkKsQXA)
+- [Proyecto](https://www.tinkercad.com/things/cn31fUhwE2b)
 
-### Trabajo Practico:
+### Parcial:
 
 [Consignas](https://github.com/magikboy/Parcial-1/blob/02b8c8bd45b8f18107d74b41cb75eaca4d41e1a5/Primer%20Parcial%20SPD%20Parte%20Practica.pdf)
