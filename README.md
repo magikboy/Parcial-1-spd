@@ -286,53 +286,6 @@ void actualizarDisplay(int piso) {
 + La función **actualizarDisplay()** se utiliza para mostrar el número del piso en el que se encuentra un elevador, por ejemplo. Se utiliza un switch para seleccionar el número del piso y luego se llama a esta función para actualizar el display con el número correspondiente. La función toma como argumento el número del piso y utiliza los comandos digitalWrite() para encender los segmentos necesarios para mostrar el número en el display.
 
 ``` C++
-void setup() {
-pinMode(BOTON_SUBIR, INPUT_PULLUP);
-pinMode(BOTON_BAJAR, INPUT_PULLUP);
-pinMode(BOTON_PAUSAR, INPUT_PULLUP);
-pinMode(led_Rojo, OUTPUT);
-pinMode(led_Verde, OUTPUT);
-pinMode(A, OUTPUT);
-pinMode(B, OUTPUT);
-pinMode(C, OUTPUT);
-pinMode(D, OUTPUT);
-pinMode(E, OUTPUT);
-pinMode(F, OUTPUT);
-pinMode(G, OUTPUT);
-Serial.begin(9600);
-mostrarPiso(contador);
-}
-
-void loop() {
-// Leer el estado de los botones
-botonSubir = digitalRead(BOTON_SUBIR);
-botonBajar = digitalRead(BOTON_BAJAR);
-botonPausa = digitalRead(BOTON_PAUSAR);
-
-// Si se presiona el botón de subir, mover hacia arriba
-if (botonSubir == LOW) {
-moverPiso("subir", TIEMPO_POR_PISO);
-}
-
-// Si se presiona el botón de bajar, mover hacia abajo
-if (botonBajar == LOW) {
-moverPiso("bajar", TIEMPO_POR_PISO);
-}
-
-// Si se presiona el botón de pausa, detener el movimiento
-if (botonPausa == LOW) {
-  mensaje = "El montacargas se detuvo";
-  Serial.println(mensaje);
-  digitalWrite(led_Verde, 0);
-  digitalWrite(led_Rojo, 1);
-  delay(TIEMPO_ESPERA_MOVIMIENTO);
-  mostrarPiso(contador);
-}
-}
-
-
-
-``` C++
 void mostrarPiso(int piso) {
 switch(piso) {
   case 0:
@@ -397,6 +350,61 @@ int moverPiso(String subirBajar, int tiempoDelay)
 + **moverPiso()** La función principal del programa es moverPiso(), que se encarga de mover el montacargas a un piso determinado. Esta función recibe dos parámetros: subirBajar, que indica si el montacargas debe subir o bajar, y tiempoDelay, que indica cuánto tiempo debe esperar el programa después de que el montacargas se mueve. Dentro de la función, primero se apaga el led rojo, se cambia el piso actual utilizando la función cambiarPiso(), se muestra el piso actual en el display utilizando la función mostrarPiso(), se enciende el led verde y se espera el tiempo indicado por el parámetro tiempoDelay. Luego se apaga el led verde, se apaga el display y se muestra un mensaje en el monitor serie indicando el piso al que se ha llegado.
 + **cambiarPiso()** La función cambiarPiso() se encarga de cambiar el piso actual del montacargas en función del parámetro subirBajar. Si subirBajar es "subir" y el contador actual es menor que 9, el contador se incrementa en 1. Si subirBajar es "bajar" y el contador actual es mayor que 0, el contador se decrementa en 1.
 + **mostrarPiso()** La función mostrarPiso() se encarga de mostrar el piso actual en el display utilizando las funciones para encender los diferentes segmentos correspondientes al número que indica el piso actual.
+
+``` C++
+void setup() {
+pinMode(BOTON_SUBIR, INPUT_PULLUP);
+pinMode(BOTON_BAJAR, INPUT_PULLUP);
+pinMode(BOTON_PAUSAR, INPUT_PULLUP);
+pinMode(led_Rojo, OUTPUT);
+pinMode(led_Verde, OUTPUT);
+pinMode(A, OUTPUT);
+pinMode(B, OUTPUT);
+pinMode(C, OUTPUT);
+pinMode(D, OUTPUT);
+pinMode(E, OUTPUT);
+pinMode(F, OUTPUT);
+pinMode(G, OUTPUT);
+Serial.begin(9600);
+mostrarPiso(contador);
+}
+
+void loop() {
+// Leer el estado de los botones
+botonSubir = digitalRead(BOTON_SUBIR);
+botonBajar = digitalRead(BOTON_BAJAR);
+botonPausa = digitalRead(BOTON_PAUSAR);
+
+// Si se presiona el botón de subir, mover hacia arriba
+if (botonSubir == LOW) {
+moverPiso("subir", TIEMPO_POR_PISO);
+}
+
+// Si se presiona el botón de bajar, mover hacia abajo
+if (botonBajar == LOW) {
+moverPiso("bajar", TIEMPO_POR_PISO);
+}
+
+// Si se presiona el botón de pausa, detener el movimiento
+if (botonPausa == LOW) {
+  mensaje = "El montacargas se detuvo";
+  Serial.println(mensaje);
+  digitalWrite(led_Verde, 0);
+  digitalWrite(led_Rojo, 1);
+  delay(TIEMPO_ESPERA_MOVIMIENTO);
+  mostrarPiso(contador);
+}
+}
+
+```
+
++La función **setup()** es una función que se ejecuta una sola vez al inicio del programa. En ella se inicializan los pines que se van a utilizar como entradas o salidas, y se establece la velocidad de comunicación para la interfaz serial (Serial.begin(9600)). Además, se llama a la función mostrarPiso() para que muestre el piso en el que se encuentra el montacargas en ese momento.
+
++La variable **botonSubir** es una variable que se utiliza para almacenar el estado del botón de subir. Se lee su estado utilizando la función digitalRead(), que devuelve un valor HIGH o LOW dependiendo de si el botón está pulsado o no.
+
++La variable **botonBajar** es una variable que se utiliza para almacenar el estado del botón de bajar. Se lee su estado utilizando la función digitalRead().
+
++La variable **botonPausa** es una variable que se utiliza para almacenar el estado del botón de pausa. Se lee su estado utilizando la función digitalRead().
 
 ---
 ## <img src="tinkercad.png" alt="Tinkercad" height="32px"> Link al proyecto
