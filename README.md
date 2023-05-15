@@ -1,15 +1,14 @@
-#📋 Documentación de la parte práctica del primer parcial para la materia Sistemas de procesamiento de datos - UTN Tecnicatura Superior en Programación.
-Sistema de Procesamiento de Datos (SPD)
-Ejercicio Estacion de subte
+##Documentación de la parte práctica del primer parcial para la materia Sistemas de procesamiento de datos - UTN Tecnicatura Superior en Programación.
+##Sistema de Procesamiento de Datos (SPD)
 
-
-## Proyecto:Estacion de subte.
+## Modelo de montacarga funcional
 
 ![Semáforos para no videntes](https://github.com/magikboy/Dojo-2/blob/main/arduino.png)
 
-##Consigna SUBTE:
-La empresa  “UTN FRA Robotics” ganó la licitación de un proyecto, y deberá Implementar un sistema que permita al usuario saber a qué estación de subte está llegando, aparte  el sistema muestra las estaciones que faltan hasta llegar a destino, para ello debemos utilizar 4 LEDs y el display de 7 segmentos. Esta vez el buzzer deberá emitir un sonido diferente cada vez que se llegue a una estación.
-El sistema deberá arrancar apagado, luego de presionar el botón empezará y hará lo pedido.
+##Consigna Montacargas:
+Se nos pide armar un modelo de montacarga funcional como maqueta para un hospital. El
+objetivo es que implementes un sistema que pueda recibir ordenes de subir, bajar o pausar
+desde diferentes pisos y muestre el estado actual del montacargas en el display 7 segmentos
 
 ## Integrantes
 
