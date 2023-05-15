@@ -396,4 +396,4 @@ Recibe como parametros:
 
 ### Trabajo Practico:
 
-[Consignas](https://github.com/magikboy/Dojo-2/blob/f539bc3bce6c9c3db08066f7b602096bf8f4e060/Ejercicio%20Estacion%20de%20subte.pdf)
+[Consignas](https://github.com/magikboy/Parcial-1/blob/02b8c8bd45b8f18107d74b41cb75eaca4d41e1a5/Primer%20Parcial%20SPD%20Parte%20Practica.pdf)
