@@ -373,11 +373,12 @@ if (botonPausa == LOW) {
 }
 }
 ```
-
+### Funcionando
 ![Montacargas de hospital](https://github.com/magikboy/Parcial-1/blob/655e31a70d93ce6f4b70d06eaaaa3bd76ab51a28/2023-05-16-11-57-43.gif)
 
-```
 ### Explicacion
+```
+
 ``` C++
 #define BOTON_SUBIR 2
 #define BOTON_BAJAR 3
