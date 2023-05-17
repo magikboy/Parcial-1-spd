@@ -33,7 +33,6 @@ const int TIEMPO_ESPERA_MOVIMIENTO = 3000; // Tiempo de espera después de que s
 boolean botonSubir = false;
 boolean botonBajar = false;
 boolean botonPausa = false;
-boolean enMovimiento = false;
 
 int contador = 0; //INICIALIZO EL CONTADOR EN 0
 String mensaje = ""; //PARA PODER ESCRIBIR EN EL MONITOR
