@@ -1,11 +1,11 @@
-Documentación de la parte práctica del primer parcial para la materia Sistemas de procesamiento de datos - UTN Tecnicatura Superior en Programación.
+###Documentación de la parte práctica del primer parcial para la materia Sistemas de procesamiento de datos - UTN Tecnicatura Superior en Programación.
 
 
-##**Sistema de Procesamiento de Datos (SPD)**
+###**Sistema de Procesamiento de Datos (SPD)**
 
 ![Arduino](https://github.com/magikboy/Parcial-1/blob/30c7b791849ce1d70de15ec52cb6a92ac3aec450/ArduinoTinkercad.jpg)
 
-## Modelo de montacarga funcional
+### Modelo de montacarga funcional
 
 ![Montacargas de hospital](https://github.com/magikboy/Parcial-1/blob/1a975207471b0b0f8a8c081eb3d869e3463c76a1/tinkercad1.png)
 
@@ -14,7 +14,7 @@ Se nos pide armar un modelo de montacarga funcional como maqueta para un hospita
 objetivo es que implementes un sistema que pueda recibir ordenes de subir, bajar o pausar
 desde diferentes pisos y muestre el estado actual del montacargas en el display 7 segmentos.
 
-## Codigo del proyecto
+### Codigo del proyecto
 ``` C++
 #define BOTON_SUBIR 2
 #define BOTON_BAJAR 3
