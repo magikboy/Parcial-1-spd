@@ -787,6 +787,6 @@ la variable **botonPausa** es una variable que se utiliza para almacenar el esta
 
 ### Fuentes
 
-- Youtube
+- [Youtube](https://www.youtube.com)
 - [electrontools](https://www.electrontools.com/Home/WP/display-7-segmentos/)
-- [Utn](http://www.sistemas-utnfra.com.ar/#/pages/carrera/tecnico-programacion/resumen)
+- [Utn](http://www.sistemas-utnfra.com.ar/#/home)
