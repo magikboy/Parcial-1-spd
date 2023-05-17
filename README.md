@@ -3,6 +3,8 @@ Documentación de la parte práctica del primer parcial para la materia Sistemas
 
 ##**Sistema de Procesamiento de Datos (SPD)**
 
+![Arduino](https://github.com/magikboy/Parcial-1/blob/30c7b791849ce1d70de15ec52cb6a92ac3aec450/ArduinoTinkercad.jpg)
+
 ## Modelo de montacarga funcional
 
 ![Montacargas de hospital](https://github.com/magikboy/Parcial-1/blob/1a975207471b0b0f8a8c081eb3d869e3463c76a1/tinkercad1.png)
