@@ -1,4 +1,4 @@
-### Documentación de la parte práctica del primer parcial para la materia Sistemas de procesamiento de datos - UTN Tecnicatura Superior en Programación.
+### 📄Documentación de la parte práctica del primer parcial para la materia Sistemas de procesamiento de datos - UTN Tecnicatura Superior en Programación.
 
 ### Nombre: Bosco Mascaro Massimo Ariel
 
@@ -15,7 +15,7 @@ Se nos pide armar un modelo de montacarga funcional como maqueta para un hospita
 objetivo es que implementes un sistema que pueda recibir ordenes de subir, bajar o pausar
 desde diferentes pisos y muestre el estado actual del montacargas en el display 7 segmentos.
 
-### Codigo del proyecto
+### 🚀Codigo del proyecto
 ``` C++
 #define BOTON_SUBIR 2
 #define BOTON_BAJAR 3
@@ -375,7 +375,7 @@ if (botonPausa == LOW) {
 }
 }
 ```
-### Funcionando
+### 🤖Funcionando
 ![Montacargas de hospital](https://github.com/magikboy/Parcial-1/blob/655e31a70d93ce6f4b70d06eaaaa3bd76ab51a28/2023-05-16-11-57-43.gif)
 
 ### Explicacion
@@ -781,11 +781,11 @@ la variable **botonPausa** es una variable que se utiliza para almacenar el esta
 
 - [Proyecto](https://www.tinkercad.com/things/cn31fUhwE2b)
 
-### Parcial:
+### 📄Parcial:
 
 [Consignas](https://github.com/magikboy/Parcial-1/blob/02b8c8bd45b8f18107d74b41cb75eaca4d41e1a5/Primer%20Parcial%20SPD%20Parte%20Practica.pdf)
 
-### Fuentes
+### 📄Fuentes
 
 - [Youtube](https://www.youtube.com)
 - [electrontools](https://www.electrontools.com/Home/WP/display-7-segmentos/)
