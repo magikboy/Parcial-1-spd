@@ -9,11 +9,11 @@
 ### Modelo de montacarga funcional
 
 ![Montacargas de hospital](https://github.com/magikboy/Parcial-1/blob/1a975207471b0b0f8a8c081eb3d869e3463c76a1/tinkercad1.png)
-### Modelo esquematico del montacargas
+### 🦴Modelo esquematico del montacargas
 
 ![Montacargas de hospital](https://github.com/magikboy/Parcial-1/blob/7917a8768ca4b1a21c14e51af70ec9adf790448b/imagen_2023-05-18_121209060.png)
 
-## Consigna Montacargas:
+## 📄Consigna Montacargas:
 Se nos pide armar un modelo de montacarga funcional como maqueta para un hospital. El
 objetivo es que implementes un sistema que pueda recibir ordenes de subir, bajar o pausar
 desde diferentes pisos y muestre el estado actual del montacargas en el display 7 segmentos.
@@ -381,7 +381,7 @@ if (botonPausa == LOW) {
 ### 🤖Funcionando
 ![Montacargas de hospital](https://github.com/magikboy/Parcial-1/blob/655e31a70d93ce6f4b70d06eaaaa3bd76ab51a28/2023-05-16-11-57-43.gif)
 
-### Explicacion
+### 🧠Explicacion
 
 ``` C++
 #define BOTON_SUBIR 2
