@@ -419,11 +419,11 @@ const char* mensajesPisos[] = {
 };
 ```
 
-+Las constantes definen los pines que se usan para los botones, LEDs y segmentos de un display de siete segmentos. También define los tiempos que tarda el montacargas en llegar a cada piso y el tiempo que se espera después de que se mueve el montacargas.
+Las constantes definen los pines que se usan para los botones, LEDs y segmentos de un display de siete segmentos. También define los tiempos que tarda el montacargas en llegar a cada piso y el tiempo que se espera después de que se mueve el montacargas.
 
-+Las variables booleanas son para almacenar el estado de los botones y el estado de movimiento del montacargas.
+Las variables booleanas son para almacenar el estado de los botones y el estado de movimiento del montacargas.
 
-+El contador se inicializa en 0 y se utiliza para indicar el piso actual en el que se encuentra el montacargas. El array de mensajes de pisos se usa para almacenar mensajes de texto que indican el piso al que se mueve el montacargas.
+El contador se inicializa en 0 y se utiliza para indicar el piso actual en el que se encuentra el montacargas. El array de mensajes de pisos se usa para almacenar mensajes de texto que indican el piso al que se mueve el montacargas.
 
 
 ``` C++
@@ -647,13 +647,13 @@ void actualizarDisplay(int piso) {
 }
 // FIN FUNCIONES
 ```
-+ La función **displayOff()** se utiliza para apagar todos los segmentos del display cuando se sale del switch o se necesita apagar el display.
+La función **displayOff()** se utiliza para apagar todos los segmentos del display cuando se sale del switch o se necesita apagar el display.
 
-+ Las funciones **cero() a nueve()**se utilizan para mostrar los dígitos del 0 al 9 en el display. Cada función enciende los segmentos necesarios para mostrar el dígito correspondiente. Por ejemplo, la función cero() enciende todos los segmentos excepto el segmento G.
+Las funciones **cero() a nueve()**se utilizan para mostrar los dígitos del 0 al 9 en el display. Cada función enciende los segmentos necesarios para mostrar el dígito correspondiente. Por ejemplo, la función cero() enciende todos los segmentos excepto el segmento G.
 
-+ La función **todos()** enciende todos los segmentos del display, lo que resulta en la visualización del número 8.
+La función **todos()** enciende todos los segmentos del display, lo que resulta en la visualización del número 8.
 
-+ La función **actualizarDisplay()** se utiliza para mostrar el número del piso en el que se encuentra un elevador, por ejemplo. Se utiliza un switch para seleccionar el número del piso y luego se llama a esta función para actualizar el display con el número correspondiente. La función toma como argumento el número del piso y utiliza los comandos digitalWrite() para encender los segmentos necesarios para mostrar el número en el display.
+La función **actualizarDisplay()** se utiliza para mostrar el número del piso en el que se encuentra un elevador, por ejemplo. Se utiliza un switch para seleccionar el número del piso y luego se llama a esta función para actualizar el display con el número correspondiente. La función toma como argumento el número del piso y utiliza los comandos digitalWrite() para encender los segmentos necesarios para mostrar el número en el display.
 
 ``` C++
 void mostrarPiso(int piso) {
@@ -716,10 +716,10 @@ int moverPiso(String subirBajar, int tiempoDelay)
 ```
 
 
-+ **las funciones principales son**
-+ **moverPiso()** La función principal del programa es moverPiso(), que se encarga de mover el montacargas a un piso determinado. Esta función recibe dos parámetros: subirBajar, que indica si el montacargas debe subir o bajar, y tiempoDelay, que indica cuánto tiempo debe esperar el programa después de que el montacargas se mueve. Dentro de la función, primero se apaga el led rojo, se cambia el piso actual utilizando la función cambiarPiso(), se muestra el piso actual en el display utilizando la función mostrarPiso(), se enciende el led verde y se espera el tiempo indicado por el parámetro tiempoDelay. Luego se apaga el led verde, se apaga el display y se muestra un mensaje en el monitor serie indicando el piso al que se ha llegado.
-+ **cambiarPiso()** La función cambiarPiso() se encarga de cambiar el piso actual del montacargas en función del parámetro subirBajar. Si subirBajar es "subir" y el contador actual es menor que 9, el contador se incrementa en 1. Si subirBajar es "bajar" y el contador actual es mayor que 0, el contador se decrementa en 1.
-+ **mostrarPiso()** La función mostrarPiso() se encarga de mostrar el piso actual en el display utilizando las funciones para encender los diferentes segmentos correspondientes al número que indica el piso actual.
+**las funciones principales son**
+**moverPiso()** La función principal del programa es moverPiso(), que se encarga de mover el montacargas a un piso determinado. Esta función recibe dos parámetros: subirBajar, que indica si el montacargas debe subir o bajar, y tiempoDelay, que indica cuánto tiempo debe esperar el programa después de que el montacargas se mueve. Dentro de la función, primero se apaga el led rojo, se cambia el piso actual utilizando la función cambiarPiso(), se muestra el piso actual en el display utilizando la función mostrarPiso(), se enciende el led verde y se espera el tiempo indicado por el parámetro tiempoDelay. Luego se apaga el led verde, se apaga el display y se muestra un mensaje en el monitor serie indicando el piso al que se ha llegado.
+**cambiarPiso()** La función cambiarPiso() se encarga de cambiar el piso actual del montacargas en función del parámetro subirBajar. Si subirBajar es "subir" y el contador actual es menor que 9, el contador se incrementa en 1. Si subirBajar es "bajar" y el contador actual es mayor que 0, el contador se decrementa en 1.
+**mostrarPiso()** La función mostrarPiso() se encarga de mostrar el piso actual en el display utilizando las funciones para encender los diferentes segmentos correspondientes al número que indica el piso actual.
 
 ``` C++
 void setup() {
